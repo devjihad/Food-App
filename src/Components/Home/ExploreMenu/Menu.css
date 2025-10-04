@@ -1,0 +1,13 @@
+/* .scroll::-webkit-scrollbar{
+    display: none;
+} */
+#done ::-webkit-scrollbar{
+    display: none;
+}
+.active{
+    border: 2px solid tomato;
+    border-radius: 50%;
+    padding: 3px;
+    /* height: 100px;
+    width: 100px;  */
+}
