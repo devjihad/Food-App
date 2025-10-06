@@ -7,6 +7,7 @@ import Menu from '../Home/ExploreMenu/Menu';
 import Contact from '../Contact/Contact';
 import Login from '../LoginCredintial/Login';
 import Singin from '../LoginCredintial/Singin';
+import Cart from '../Cart/Cart';
 
 const Router1 = () => {
     const router =createBrowserRouter([
@@ -37,6 +38,10 @@ const Router1 = () => {
                 {
                     path:"signup",
                     element:<Singin/>
+                },
+                {
+                    path:'/cart',
+                    element:<Cart/>
                 }
             ]
         }

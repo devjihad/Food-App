@@ -1,23 +1,30 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext} from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import appe from '../../../Firebase/Firebase.config';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth} from 'firebase/auth';
 import { toast, ToastContainer } from 'react-toastify';
+import { StoreContext } from '../ContextApi/Context';
+
 const Login = () => {
   const Auth =getAuth(appe)
-  const [value, setvalue] =useState(null)
-  console.log(value)
+  const {Logine, setvalue} =useContext(StoreContext)
+  const navigate = useNavigate()
+  // console.log(value)
     const log =(e)=>{
         e.preventDefault()
         const email =e.target.email.value
         const password = e.target.password.value
         console.log(email,password)
 
-        signInWithEmailAndPassword(Auth, email, password)
+        Logine(Auth, email, password)
         .then(result=>{
           const user= result.user
           setvalue(user)
+          alert(' Login Successfull')
+          navigate('/')
           toast('Login Successfull')
+          
+        
         })
         .catch(err=>{
           console.log(err.message)
