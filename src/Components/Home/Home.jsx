@@ -11,7 +11,7 @@ const Home = () => {
         const [valu, setvalu] =useState('ALL')
 
     return (
-        <div className=' max-w-4xl mx-auto font-serif'>
+        <div >
             
             <Landing/>
             <Menu valu={valu} setvalu={setvalu}/>

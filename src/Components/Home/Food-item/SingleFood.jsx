@@ -27,7 +27,7 @@ const SingleFood = ({list}) => {
             </div>
             <div className='px-2'>
                 <div className='flex justify-between items-center'>
-                    <h1 className='text-xl py-1'>{name}</h1>
+                    <h1 className='text-lg py-1'>{name}</h1>
                     <p className='flex text-[9px] text-yellow-400'><FaStar/> <FaStar/> <FaStar/> <FaStar/> <FaStar/></p>
                 </div>
                 <p className='text-[10px]'>{description}</p>

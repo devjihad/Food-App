@@ -8,6 +8,7 @@ import Contact from '../Contact/Contact';
 import Login from '../LoginCredintial/Login';
 import Singin from '../LoginCredintial/Singin';
 import Cart from '../Cart/Cart';
+import Order from '../Order/Order';
 
 const Router1 = () => {
     const router =createBrowserRouter([
@@ -42,6 +43,10 @@ const Router1 = () => {
                 {
                     path:'/cart',
                     element:<Cart/>
+                },
+                {
+                    path: '/order',
+                    element:<Order/>
                 }
             ]
         }

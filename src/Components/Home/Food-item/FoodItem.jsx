@@ -11,7 +11,7 @@ const FoodItem = ({valu}) => {
         <div className='font-serif'>
             <h1 className='text-2xl pb-5'>Top deshes near you</h1>
 
-            <div className='grid grid-cols-4 '>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center '>
                 {
                     food_list.map((list, index)=>{
                         if(valu ==="ALL" || valu===list.category){
