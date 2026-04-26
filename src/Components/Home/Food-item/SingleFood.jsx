@@ -11,9 +11,9 @@ const SingleFood = ({list}) => {
     console.log(_id)
     
     return (
-        <div className=' w-[200px] bg-gray-100 rounded-2xl mb-10 shadow-2xl'>
+        <div className=' w-75 sm:w-full bg-gray-100 rounded-2xl mb-10 shadow-xl border border-gray-300'>
             <div className='relative'>
-                <img src={image} alt="" className='h-[150px] w-[200px] flex justify-center rounded-t-2xl' />
+                <img src={image} alt="" className='h-[150px] w-full flex justify-center rounded-t-2xl' />
                 {
                     !count[_id]
                     ? <img className='absolute w-[30px] bottom-[10px] right-[10px] rounded-full' src={assets.add_icon_white} onClick={()=>AddTocard(_id)}/>
@@ -27,12 +27,12 @@ const SingleFood = ({list}) => {
             </div>
             <div className='px-2'>
                 <div className='flex justify-between items-center'>
-                    <h1 className='text-lg py-1'>{name}</h1>
+                    <h1 className='text-xl py-1'>{name}</h1>
                     <p className='flex text-[9px] text-yellow-400'><FaStar/> <FaStar/> <FaStar/> <FaStar/> <FaStar/></p>
                 </div>
-                <p className='text-[10px]'>{description}</p>
+                <p className='text-[12px]'>{description}</p>
                
-                    <p className='flex items-center pb-3'> ${price}</p>
+                    <p className='flex items-center pb-3 text-[18px]'> ${price}</p>
                     
                
 
